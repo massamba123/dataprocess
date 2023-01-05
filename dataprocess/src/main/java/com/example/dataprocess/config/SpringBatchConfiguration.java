@@ -33,7 +33,6 @@ public class SpringBatchConfiguration {
     public SpringBatchConfiguration(PersonneRepository personneRepository){
         this.personneRepository = personneRepository;
     }
-
     @Bean
     public Step myStep(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
         return new StepBuilder("step2", jobRepository)
